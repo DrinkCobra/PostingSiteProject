@@ -1,0 +1,38 @@
+#home-page {
+    width: 100%;
+    height: 100%;
+}
+#home-page-landing {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/15908316-2201-4095-b74a-3cb432e3eb7d/ddt0ed2-2365e41f-0b97-4e78-8744-4dd2596ec14c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE1OTA4MzE2LTIyMDEtNDA5NS1iNzRhLTNjYjQzMmUzZWI3ZFwvZGR0MGVkMi0yMzY1ZTQxZi0wYjk3LTRlNzgtODc0NC00ZGQyNTk2ZWMxNGMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.t8sE_m166sLBArwW7Lqi4adXi5Bd5xyQABEUlWsNABE");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    min-height: 800x
+}
+#landing-left {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap
+}
+#landing-left-content { 
+    text-align: right;
+    padding: 1em 1em 1em 3em;   
+}
+#landing-left-content h1{ 
+    font-size: 4em;
+}
+#landing-left-content p{ 
+    font-size: 2em;
+    padding-top: .5em;
+}
+#landing-left-content button{ 
+    font-size: 2em;
+    padding: .5em;
+}
