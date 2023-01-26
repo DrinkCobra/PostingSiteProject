@@ -8,22 +8,28 @@ import { FirebaseTSApp } from "firebasets/firebasetsApp/firebaseTSApp";
 import { environment } from "src/environments/environment";
 import { HomeComponent } from "./pages/home/home.component";
 import {MatButtonModule} from '@angular/material/button';
-import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 import { PostFeedComponent } from './pages/post-feed/post-feed.component';
+import { CreatePostComponent } from './tools/create-post/create-post.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostFeedComponent
+    PostFeedComponent,
+    HomeComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatBottomSheetModule,
-    
+    MatDialogModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
