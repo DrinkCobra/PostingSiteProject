@@ -1,0 +1,16 @@
+<p>Reply</p>
+<div id="reply-box">
+    <div *ngFor="let comment of comments">
+        <div>
+            <p>Anon</p>
+            <p>{{comment?.comment}}</p>
+        </div>
+    </div>
+</div>
+<div id="reply-action-bar">
+    <button mat-flat-button color="warn"
+    (click)="onSendClick(commentInput)">
+        <mat-icon>send</mat-icon>
+    </button>
+    <input placeholder="Comment..." #commentInput>
+</div>

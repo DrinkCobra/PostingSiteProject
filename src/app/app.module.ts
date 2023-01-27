@@ -24,6 +24,7 @@ import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { PostComponent } from './tools/post/post.component';
+import { ReplyComponent } from './tools/reply/reply.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PostComponent } from './tools/post/post.component';
     PostFeedComponent,
     HomeComponent,
     CreatePostComponent,
-    PostComponent
+    PostComponent,
+    ReplyComponent
   ],
   imports: [
     BrowserModule,
