@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "postingsiteproject": {
+      "hosting": {
+        "PostingSiteProject": [
+          "postingsiteproject"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "postingsiteproject"
+  }
+}

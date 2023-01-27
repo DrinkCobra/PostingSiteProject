@@ -6,6 +6,7 @@ import { PostFeedComponent } from './pages/post-feed/post-feed.component';
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "postfeed", component: PostFeedComponent},
+  {path: "home", component: HomeComponent},
   {path: "**", component: HomeComponent},
 ];
 
