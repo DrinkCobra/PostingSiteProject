@@ -31,7 +31,7 @@ export class PostFeedComponent implements OnInit{
           result.docs.forEach(
             doc => {
               let post = <PostData>doc.data();
-              post.postID = doc.id;
+              post.postId = doc.id;
               this.posts.push(post);
             }
           );
@@ -47,5 +47,5 @@ export class PostFeedComponent implements OnInit{
 export interface PostData {
   comment: string;
   imageUrl?: string;
-  postID: string;
+  postId: string;
 }

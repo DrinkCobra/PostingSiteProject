@@ -26,3 +26,15 @@ input{
     -webkit-box-sizing: border-box;
     direction: ltr;
 }
+
+.comment-container{
+    display: flex;
+}
+.comment-name{
+    font-size: .9em;
+}
+.comment{
+    border-radius: 1em;
+    background-color: gainsboro;
+    padding: 1em;
+}

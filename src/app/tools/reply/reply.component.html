@@ -1,9 +1,9 @@
 <p>Reply</p>
 <div id="reply-box">
-    <div *ngFor="let comment of comments">
+    <div *ngFor="let comment of comments" [ngClass]="{'comment-container': true}">
         <div>
-            <p>Anon</p>
-            <p>{{comment?.comment}}</p>
+            <p clas="comment-name">Anon</p>
+            <p [ngClass]="{'comment': true}">{{comment?.comment}}</p>
         </div>
     </div>
 </div>
