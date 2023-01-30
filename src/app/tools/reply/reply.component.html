@@ -2,7 +2,7 @@
 <div id="reply-box">
     <div *ngFor="let comment of comments" [ngClass]="{'comment-container': true}">
         <div>
-            <p clas="comment-name">Anon</p>
+            <p class="comment-name">Anon</p>
             <p [ngClass]="{'comment': true}">{{comment?.comment}}</p>
         </div>
     </div>
@@ -12,5 +12,5 @@
     (click)="onSendClick(commentInput)">
         <mat-icon>send</mat-icon>
     </button>
-    <input placeholder="Comment..." #commentInput>
+    <input placeholder="Comment..." #commentInput (keydown.enter)="onSendClick(commentInput)">
 </div>

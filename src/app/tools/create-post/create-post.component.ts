@@ -4,6 +4,7 @@ import { FirebaseTSStorage } from 'firebasets/firebasetsStorage/firebaseTSStorag
 import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp';
 import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
 import { MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-post',
@@ -16,8 +17,11 @@ export class CreatePostComponent implements OnInit{
   app = new FirebaseTSApp();
   firestore = new FirebaseTSFirestore();
   storage = new FirebaseTSStorage();
-  constructor(private dialog: MatDialogRef<CreatePostComponent>) { }
-
+  constructor(private dialog: MatDialogRef<CreatePostComponent>, private router: Router) { 
+    this.router.routeReuseStrategy.shouldReuseRoute = () => {
+    return false;
+    };
+  }
   ngOnInit(): void {
   }
 
@@ -29,6 +33,7 @@ export class CreatePostComponent implements OnInit{
     }else{
       this.uploadPost(comment);
     }
+    this.router.navigateByUrl('/postfeed');
   }
 
   uploadImagePost(comment: string){
@@ -51,6 +56,7 @@ export class CreatePostComponent implements OnInit{
               },
               onComplete: (docId) => {
                 this.dialog.close();
+                this.router.navigateByUrl('/postfeed');
             }
           }
         );
@@ -69,6 +75,7 @@ export class CreatePostComponent implements OnInit{
         },
         onComplete: (docId) => {
           this.dialog.close();
+          this.router.navigateByUrl('/postfeed');
       }
     }
   );
