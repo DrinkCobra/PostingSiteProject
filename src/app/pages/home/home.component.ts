@@ -14,4 +14,6 @@ export class HomeComponent implements OnInit{
   onStartPostingClick(){
     this.router.navigate(['postfeed']);
   }
+
+
 }

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { PostData } from 'src/app/pages/post-feed/post-feed.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ReplyComponent } from '../reply/reply.component';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-post',
@@ -16,4 +17,7 @@ export class PostComponent implements OnInit{
   onReplyClick(){
     this.dialog.open(ReplyComponent, {data: this.postData.postId});
   }
+
+  infoTip = 'Date posted: mm/dd/yyyy'
+  infoText = new FormControl(this.infoTip);
 }
